@@ -1,1 +1,1 @@
-# WEB_SERVICES
+This repository includes Service-Oriented Architecture (SOA) related technologies and project examples of both SOAP and REST Webservices using JAVA. JAX-WS, JAX-RS, JAXB and Apache CXF APIs and maven plugins (for stubs generation from WSDL custom files) are used, along with Spring / SpringBoot frameworks. Eclipse has been used as the IDE. And SOAPUI and Postman have been used for testing, as well as custom client classes. Security and OAuth are also exemplified. XML, XSD and JSON are extensively used throughout the examples, as expected. JAVA10+ compatible.
