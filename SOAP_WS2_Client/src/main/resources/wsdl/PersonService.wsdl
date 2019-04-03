@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.SOAP_WS2.danielpm1982.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PersonManagerService" targetNamespace="http://ws.SOAP_WS2.danielpm1982.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.SOAP_WS2.danielpm1982.com/" elementFormDefault="unqualified" targetNamespace="http://ws.SOAP_WS2.danielpm1982.com/" version="1.0">
+
+  <xs:element name="getPatientAll" type="tns:getPatientAll"/>
+
+  <xs:element name="getPatientAllResponse" type="tns:getPatientAllResponse"/>
+
+  <xs:element name="getPatientById" type="tns:getPatientById"/>
+
+  <xs:element name="getPatientByIdResponse" type="tns:getPatientByIdResponse"/>
+
+  <xs:element name="getProfessionalAll" type="tns:getProfessionalAll"/>
+
+  <xs:element name="getProfessionalAllResponse" type="tns:getProfessionalAllResponse"/>
+
+  <xs:element name="getProfessionalById" type="tns:getProfessionalById"/>
+
+  <xs:element name="getProfessionalByIdResponse" type="tns:getProfessionalByIdResponse"/>
+
+  <xs:complexType name="getProfessionalById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProfessionalByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:Professional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Professional">
+    <xs:sequence>
+      <xs:element name="professionalId" type="xs:integer"/>
+      <xs:element name="professionalName" type="xs:string"/>
+      <xs:element name="professionalAddress" type="xs:string"/>
+      <xs:element name="professionalEmail" type="xs:string"/>
+      <xs:element name="professionalPhoneNo" type="xs:string"/>
+      <xs:element name="professionalProfession" type="xs:string"/>
+      <xs:element name="professionalSpecialty" type="xs:string"/>
+      <xs:element name="professionalRegistry" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPatientById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPatientByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:Patient"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Patient">
+    <xs:sequence>
+      <xs:element name="patientId" type="xs:integer"/>
+      <xs:element name="patientName" type="xs:string"/>
+      <xs:element name="patientAddress" type="xs:string"/>
+      <xs:element name="patientEmail" type="xs:string"/>
+      <xs:element name="patientPhoneNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getProfessionalAll">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getProfessionalAllResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:Professional"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPatientAll">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getPatientAllResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:Patient"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getProfessionalByIdResponse">
+    <wsdl:part element="tns:getProfessionalByIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPatientById">
+    <wsdl:part element="tns:getPatientById" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProfessionalAllResponse">
+    <wsdl:part element="tns:getProfessionalAllResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPatientAll">
+    <wsdl:part element="tns:getPatientAll" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProfessionalById">
+    <wsdl:part element="tns:getProfessionalById" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProfessionalAll">
+    <wsdl:part element="tns:getProfessionalAll" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPatientByIdResponse">
+    <wsdl:part element="tns:getPatientByIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPatientAllResponse">
+    <wsdl:part element="tns:getPatientAllResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PersonManager">
+    <wsdl:operation name="getProfessionalById">
+      <wsdl:input message="tns:getProfessionalById" name="getProfessionalById">
+    </wsdl:input>
+      <wsdl:output message="tns:getProfessionalByIdResponse" name="getProfessionalByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientById">
+      <wsdl:input message="tns:getPatientById" name="getPatientById">
+    </wsdl:input>
+      <wsdl:output message="tns:getPatientByIdResponse" name="getPatientByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfessionalAll">
+      <wsdl:input message="tns:getProfessionalAll" name="getProfessionalAll">
+    </wsdl:input>
+      <wsdl:output message="tns:getProfessionalAllResponse" name="getProfessionalAllResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientAll">
+      <wsdl:input message="tns:getPatientAll" name="getPatientAll">
+    </wsdl:input>
+      <wsdl:output message="tns:getPatientAllResponse" name="getPatientAllResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonManagerServiceSoapBinding" type="tns:PersonManager">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProfessionalById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProfessionalById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProfessionalByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPatientById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPatientByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProfessionalAll">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProfessionalAll">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProfessionalAllResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientAll">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPatientAll">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPatientAllResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonManagerService">
+    <wsdl:port binding="tns:PersonManagerServiceSoapBinding" name="PersonManagerPort">
+      <soap:address location="http://localhost:8080/SOAP_WS2/api/personService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
