@@ -1,0 +1,65 @@
+body{
+	background-color: black;
+	text-align: center;
+	color: white;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+div.welcome, div.soapOps, div.error, div.customerOrders, div.orderCreationResult, div.downloadOpResult, div.uploadOpResult{
+	font-size: 2em;
+	font-family: monospace;
+/* 	border: thin white dashed; */
+	width: 70%;
+	margin: auto;
+	margin-top: 1.5em;
+	color: lightgray;
+}
+div.soapOps p{
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+div#ordersListBody{
+	border: thin brown dashed;
+	width: 60%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 1em;
+	text-decoration: none;
+}
+img#img1{
+	width: 50%;
+	margin-bottom: 1em;
+/* 	border: thin white solid; */
+	padding: 1em;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+footer{
+	margin-top: 3em;
+	font-size: 1.5em;
+	font-family: monospace;
+	color: lightgray;	
+}
+footer a, error a{
+	font-size: 1.2em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.error{
+	font-size: 1.2em;
+}
+div.error a{
+	line-height: 3;
+	font-size: 1.7em;
+}

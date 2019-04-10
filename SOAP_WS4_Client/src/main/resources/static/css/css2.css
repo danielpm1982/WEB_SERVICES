@@ -1,0 +1,68 @@
+body{
+	background-color: black;
+	text-align: center;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+div.welcome, div.soapOps, div.error, div.customerOrders, div.orderCreationResult, div.downloadOpResult, div.uploadOpResult{
+	font-size: 1.5em;
+	font-family: monospace;
+	width: 95%;
+	margin: auto;
+	margin-top: 1em;
+	color: lightgray;
+}
+div.soapOps p{
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+div.welcome{
+	font-size: 1.8em;
+}
+div#ordersListBody{
+	border: thin brown dashed;
+	width: 80%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-right: 1em;
+	padding-left: 1em;
+	text-decoration: none;
+}
+img#img1{
+	width: 80%;
+	margin-bottom: 0.5em;
+}
+footer{
+	margin-top: 5em;
+	font-size: 1.2em;
+	font-family: monospace;
+	color: lightgray;	
+}
+footer a, error a{
+	font-size: 0.8em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.error{
+	font-size: 0.8em;
+}
+div.error a{
+	line-height: 3;
+	font-size: 1.8em;
+}
+div#stacktrace{
+	line-height: 1.5;
+	font-size: 0.4em;
+}
