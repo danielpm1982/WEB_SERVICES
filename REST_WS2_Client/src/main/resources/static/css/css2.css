@@ -1,0 +1,128 @@
+body{
+	background-color: black;
+	text-align: center;
+	color: white;
+	margin-top: 0em;
+	margin-bottom: 2em;
+}
+div.welcome, div.error, div.mainBody, div.servicesList, div.personForm form{
+	font-size: 1.2em;
+	font-family: monospace;
+/* 	border: thin white dashed; */
+	width: 95%;
+	margin: auto;
+	margin-top: 1.5em;
+	color: lightgray;
+}
+div.welcome{
+	font-size: 1.6em;
+}
+div.mainBody{
+	line-height: 1.5;
+}
+div.servicesList{
+	color: green;
+	font-size: 1em;
+	text-align: justify;
+	display: table;
+	border: solid chocolate 0.2em;
+}
+div.personForm form{
+	color: green;
+	font-size: 1em;
+	text-align: justify;
+	width: 85%;
+	display: table;
+	border: solid chocolate 0.2em;
+}
+div.tableRow{
+	display: table-row;
+	line-height: 2;
+}
+div.tableCell{
+	display: table-cell;
+	padding: 0.2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border: thin dashed red;
+}
+div.tableCell:nth-child(1){
+	background-color: lightblue;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+div.tableCell:nth-child(2){
+	background-color: lightyellow;
+	padding-left: 0.5em;
+}
+input[type="number"], input[type="text"], input[type="submit"]{
+	background-color: white;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	color: black;
+	font-size: 0.7em;
+	padding: 0.3em;
+}
+input[type="number"]{
+	width: 2em;
+}
+img#img1{
+	width: 80%;
+	margin-bottom: 1em;
+}
+img#img2, img#img3, img#img4{
+	width: 20%;
+	margin-bottom: 1em;
+	margin-top: 2em;
+	padding: 1em;
+}
+img#img3{
+	padding: 0em;
+	margin-bottom: 2em;
+}
+img#img5{
+	width: 12em;
+}
+img#img6{
+	width: 4em;
+	margin-right: 2em;
+}
+img#img7{
+	width: 6em;
+	margin-top: 2em;
+}
+div.nav{
+	margin-top: 2.5em;
+}
+footer{
+	margin-top: 7em;
+	font-size: 1em;
+	font-family: monospace;
+	color: lightgray;	
+}
+footer a, error a{
+	font-size: 1.2em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.error{
+	font-size: 0.8em;
+}
+div.error a{
+	line-height: 3;
+	font-size: 1.8em;
+}
+div#stacktrace{
+	line-height: 1.5;
+	font-size: 0.4em;
+}
