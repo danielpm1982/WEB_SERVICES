@@ -1,0 +1,136 @@
+body{
+	font-family: monospace;
+	text-align: center;
+	background-color: black;
+	color: blanchedalmond;
+}
+form.login, form#register {
+	font-size: 0.9em;
+	border: thin white dashed;
+	width: 90%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	padding: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 1em;
+}
+input[type="text"], input[type="password"]{
+	font-size: 1.3em;
+	padding: 0.1em;
+	width: 100%;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+}
+input[type="submit"]{
+	font-size: 15px;
+	font-weight: bolder;
+	padding: 0.4em;
+	width: 7em;
+	margin-top: 0.4em;
+	margin-bottom: 0.5em;
+}
+select{
+	font-size: 0.8em;
+	height: 3.5em;
+	position: relative;
+	top: 0.8em;
+	margin-right: 1.8em;
+}
+h3.errors{
+	color: red;
+	background-color: yellow;
+	margin-bottom: 0em;
+}
+h3.logout{
+	color: black;
+	background-color: lightGreen;
+	margin-bottom: 1.5em;
+}
+h6{
+	margin-top: 0em;
+	margin-bottom: 0em;
+	font-size: 0.7em;
+}
+div#title{
+	margin-bottom: 1.5em;
+	font-size: 1.2em;
+}
+img{
+	width: 18%;
+	position: relative;
+	top: 0.5em;
+	right: 1em;
+	margin-left: 1em;
+}
+img#img1{
+	width: 80%;
+	margin-bottom: 1.5em;
+}
+img#img2{
+	width: 20%;
+	position: relative;
+	top: -3.5em;
+	right: -32%;
+}
+img#img3{
+	width: 40%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+div.imgInput{
+	width: 90%;
+	margin: auto;
+}
+hr{
+	margin-top: -2.5em;
+}
+div.link1{
+	margin-top: 1em;
+	font-size: 1.7em;
+}
+div.link2{
+	margin: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 1.5em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.home, div.welcome, div.accessDenied, div.error, div.resultBody{
+	font-size: 1em;
+	width: 90%;
+	margin: auto;
+	margin-top: 1.5em;
+}
+div.welcome{
+	font-size: 0.9em;
+	border: dashed thin;
+}
+div.welcome p{
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+}
+div.accessDenied{
+	margin-bottom: 2em;
+}
+div.error{
+	font-size: 1em;
+}
+div.resultBodyContent{
+	font-size: 0.8em;
+}
+footer{
+	font-size: 1.2em;
+	margin-top: 3em;	
+}

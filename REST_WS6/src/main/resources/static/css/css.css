@@ -1,0 +1,138 @@
+body{
+	font-family: monospace;
+	text-align: center;
+	background-color: black;
+	color: blanchedalmond;
+}
+form.login, form#register {
+	font-size: 1.85em;
+	border: thin white dashed;
+	width: 50%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	padding: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 1.5em;
+}
+input[type="text"], input[type="password"]{
+	font-size: 1em;
+	padding: 0.4em;
+	width: 15em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+input[type="submit"]{
+	font-size: 25px;
+	font-weight: bolder;
+	padding: 0.4em;
+	width: 7em;
+	margin-top: 1em;
+	margin-bottom: 0em;
+}
+select{
+	font-size: 0.8em;
+	height: 3.5em;
+	position: relative;
+	top: 0.6em;
+	margin-right: 1.8em;
+}
+h3.errors{
+	color: red;
+	background-color: yellow;
+	margin-bottom: 1.5em;
+}
+h3.logout{
+	color: black;
+	background-color: lightGreen;
+	margin-bottom: 1.5em;
+}
+h5{
+	font-size: 1.2em;
+}
+h6{
+	margin-top: 0em;
+	margin-bottom: 0em;
+	font-size: 1em;
+}
+div#title{
+	margin-bottom: 1.5em;
+	font-size: 1.4em;
+}
+img{
+	width: 13%;
+	position: relative;
+	top: 0.5em;
+	right: 1em;
+	margin-left: 1em;
+}
+img#img1{
+	width: 40%;
+	margin-bottom: 2em;
+}
+img#img2{
+	width: 15%;
+	position: relative;
+	top: -3.5em;
+	right: -28%;
+}
+img#img3{
+	width: 22%;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+div.imgInput{
+	width: 70%;
+	margin: auto;
+}
+hr{
+	margin-top: -2.5em;
+}
+div.link1{
+	margin-top: 1.5em;
+	font-size: 1em;
+}
+div.link2{
+	margin: 3em;
+	font-size: 1.8em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.home, div.welcome, div.accessDenied, div.error, div.resultBody{
+	font-size: 2em;
+	width: 70%;
+	margin: auto;
+	margin-top: 1.5em;
+}
+div.welcome{
+	font-size: 1.5em;
+	border: dashed thin;
+	width: 55%;
+}
+div.welcome p{
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+}
+div.accessDenied{
+	margin-bottom: 2em;
+}
+div.error{
+	font-size: 1.2em;
+}
+div.resultBodyContent{
+	font-size: 0.8em;
+}
+footer{
+	font-size: 1.6em;
+	margin-top: 3em;	
+}
