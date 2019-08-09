@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:note 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:danielpm1982="http://www.danielpm1982.com/note1"
+	noteId="150">
+	<danielpm1982:from>user1</danielpm1982:from>
+	<danielpm1982:to>user2</danielpm1982:to>
+	<danielpm1982:messageText>Hello user2 from user1!</danielpm1982:messageText>
+	<danielpm1982:dateTime>2019-01-01T12:00:00</danielpm1982:dateTime>
+</danielpm1982:note>
+
+<!-- Example of note with no schema reference-->

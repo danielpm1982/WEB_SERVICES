@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note noteId="150">
+	<from>user1</from>
+	<to>user2</to>
+	<messageText>Hello user2 from user1!</messageText>
+	<dateTime>2019-01-01T12:00:00</dateTime>
+</note>
+
+<!-- Example of note with no schema reference and no namespaces-->
