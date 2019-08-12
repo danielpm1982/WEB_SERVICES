@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982Note1:note 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.danielpm1982.com/note1 Note1.xsd"
+	xmlns:danielpm1982Note1="http://www.danielpm1982.com/note1"
+	danielpm1982Note1:noteId="150">
+	<danielpm1982Note1:from>user1</danielpm1982Note1:from>
+	<danielpm1982Note1:to>user2</danielpm1982Note1:to>
+	<danielpm1982Note1:messageText>Hello user2 from user1!</danielpm1982Note1:messageText>
+	<danielpm1982Note1:dateTime>2019-01-01T12:00:00</danielpm1982Note1:dateTime>
+</danielpm1982Note1:note>

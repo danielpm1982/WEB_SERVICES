@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<danielpm1982:animalGroup
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/AnimalGroup AnimalGroup.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/AnimalGroup"
+	danielpm1982:groupId="2">
+	<danielpm1982:dog danielpm1982:animalId="1">
+		<danielpm1982:name>DogA</danielpm1982:name>
+		<danielpm1982:species>Canis familiaris</danielpm1982:species>
+		<danielpm1982:color>Brown</danielpm1982:color>
+		<danielpm1982:birthDate>2005-01-01</danielpm1982:birthDate>
+		<danielpm1982:owner>OwnerDEF</danielpm1982:owner>
+	</danielpm1982:dog>
+	<danielpm1982:cat danielpm1982:animalId="2">
+		<danielpm1982:name>CatA</danielpm1982:name>
+		<danielpm1982:species>Felis catus</danielpm1982:species>
+		<danielpm1982:color>white</danielpm1982:color>
+		<danielpm1982:birthDate>2000-01-01</danielpm1982:birthDate>
+		<danielpm1982:owner>OwnerABC</danielpm1982:owner>
+	</danielpm1982:cat>
+	<danielpm1982:rabbit danielpm1982:animalId="3">
+		<danielpm1982:name>RabbitA</danielpm1982:name>
+		<danielpm1982:species>Oryctolagus cuniculus</danielpm1982:species>
+		<danielpm1982:color>white</danielpm1982:color>
+	</danielpm1982:rabbit>
+</danielpm1982:animalGroup>
+
+<!-- 
+Just another animal group for the same xsd.
+You'd have as many XML files as instances, one for each.
+For example, having 30 groups of animals would demand 30 XML files, for the common XSD Scheme.
+-->
