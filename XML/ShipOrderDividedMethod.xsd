@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/ShipOrderDividedMethod"
+	xmlns:danielpm1982="http://www.danielpm1982.com/ShipOrderDividedMethod"
+	elementFormDefault="qualified">
+	<!-- definition of base simple elements -->
+	<xs:element name="client" type="xs:string" />
+	<xs:element name="name" type="xs:string" />
+	<xs:element name="address" type="xs:string" />
+	<xs:element name="email" type="xs:string" />
+	<xs:element name="city" type="xs:string" />
+	<xs:element name="state" type="xs:string" />
+	<xs:element name="country" type="xs:string" />
+	<xs:element name="zipCode" type="xs:positiveInteger" />
+	<xs:element name="title" type="xs:string" />
+	<xs:element name="quantity" type="xs:positiveInteger" />
+	<xs:element name="price" type="xs:decimal" />
+	<xs:element name="discountTicket" type="xs:string" />
+	<xs:element name="dateTime" type="xs:dateTime" />
+	<!-- definition of base attributes -->
+	<xs:attribute name="orderId" type="xs:string" />
+	<!-- definition of base complex elements referring to simple elements using "ref" attribute-->
+	<xs:element name="shipTo">
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element ref="danielpm1982:name" />
+	      <xs:element ref="danielpm1982:address" />
+	      <xs:element ref="danielpm1982:email" />
+	      <xs:element ref="danielpm1982:city" />
+	      <xs:element ref="danielpm1982:state" />
+	      <xs:element ref="danielpm1982:country" />
+	      <xs:element ref="danielpm1982:zipCode" />
+	    </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	<xs:element name="item">
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element ref="danielpm1982:title" />
+	      <xs:element ref="danielpm1982:quantity" />
+	      <xs:element ref="danielpm1982:price" />
+	    </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	<!-- definition of final root element by referring to other base elements (simple and complex) and base attributes using "ref" attribute-->
+	<xs:element name="shipOrder">
+	  <xs:complexType>
+	    <xs:sequence>
+	      <xs:element ref="danielpm1982:client" />
+	      <xs:element ref="danielpm1982:shipTo" />
+	      <xs:element ref="danielpm1982:item" maxOccurs="unbounded" />
+	      <xs:element ref="danielpm1982:discountTicket" />
+	      <xs:element ref="danielpm1982:dateTime" />
+	    </xs:sequence>
+	    <xs:attribute ref="danielpm1982:orderId" use="required" />
+	  </xs:complexType>
+	</xs:element>
+</xs:schema>

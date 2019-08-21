@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<danielpm1982:consultationRecord
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/consultationRecord ConsultationRecord.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/consultationRecord"
+	danielpm1982:consultationRecordId="1500">
+	<danielpm1982:patient danielpm1982:patientId="500">
+		<danielpm1982:name>Patient ABC</danielpm1982:name>
+		<danielpm1982:gender>male</danielpm1982:gender>
+		<danielpm1982:birthDate>1950-10-01</danielpm1982:birthDate>
+		<danielpm1982:email>patientabc@patient.com</danielpm1982:email>
+		<danielpm1982:address>5th street, 4th neighborhood, city X, state Y, country Z</danielpm1982:address>
+		<danielpm1982:phoneNumber>9198165165</danielpm1982:phoneNumber>
+		<danielpm1982:phoneNumber>5455454546</danielpm1982:phoneNumber>
+	</danielpm1982:patient>
+	<danielpm1982:clinician danielpm1982:clinicianId="15">
+		<danielpm1982:professionalNumber>50430</danielpm1982:professionalNumber>
+		<danielpm1982:profession>pharmacistDoctor</danielpm1982:profession>
+		<danielpm1982:name>Pharmacist ABC</danielpm1982:name>
+		<danielpm1982:gender>male</danielpm1982:gender>
+		<danielpm1982:email>pharmacistabc@clinician.com</danielpm1982:email>
+		<danielpm1982:phoneNumber>1156189495</danielpm1982:phoneNumber>
+	</danielpm1982:clinician>
+	<danielpm1982:consultation>
+		<danielpm1982:dateTime>2019-01-01T12:00:00</danielpm1982:dateTime>
+		<danielpm1982:diagnosis>Wrong diagnosis</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Wrong Pharmaceutical treatment</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Medications with no indications</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Misdiagnosed conditions for which no drug is prescribed</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Medication prescribed inappropriately for particular conditions</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Inappropriate dose, dosage form, schedule, route of administration, or method of administration</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Actual and potential adverse drug events</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Actual  and  potential  drug–drug,  drug–disease and  drug–nutrient interactions - clinically significant</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Problems are arising from the financial impact of therapy</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Lack of understanding of the medications</danielpm1982:diagnosis>
+		<danielpm1982:diagnosis>Missing Pharmaceutical clinical pathology lab exams for correct, sensible, specific and specialized histologic, cellular, molecular, genetic and atomic diagnosis</danielpm1982:diagnosis>
+		<danielpm1982:intervention>Full pharmaceutical clinical-pathology lab exams solicited and analysed by the Pathologist Pharmacist along with the Clinical Pharmacist</danielpm1982:intervention>
+		<danielpm1982:intervention>New diagnosis consensus reached along with the clinical care team</danielpm1982:intervention>
+		<danielpm1982:intervention>New pharmacotherapy plan established and prescribed by the Clinical Pharmacist, new clinical protocols and patient categories adopted</danielpm1982:intervention>
+		<danielpm1982:intervention>All drug-related problems regarding indication, missing drugs and posology corrected</danielpm1982:intervention>
+		<danielpm1982:intervention>Drug events managed and interactions resolved</danielpm1982:intervention>
+		<danielpm1982:intervention>Financial problem resolved, with costs reduced by 50%</danielpm1982:intervention>
+		<danielpm1982:intervention>Patient re-oriented about all his conditions, correct care management and pharmaceutical issues related to drugs efficacy and security</danielpm1982:intervention>
+		<danielpm1982:intervention>Continuous Clinical Pharmaceutical Consultations established and scheduled</danielpm1982:intervention>
+		<danielpm1982:intervention>All other clinicians notified and re-scheduled for the respective re-consultations</danielpm1982:intervention>
+		<danielpm1982:intervention>Clinical Pharmaceutical consultation documented and registered at the patient Health Record</danielpm1982:intervention>
+	</danielpm1982:consultation>
+</danielpm1982:consultationRecord>
