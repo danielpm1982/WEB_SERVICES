@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/noteAll"
+	xmlns:danielpm1982NoteAll="http://www.danielpm1982.com/noteAll"
+	xmlns:danielpm1982Note1="http://www.danielpm1982.com/note1"
+	xmlns:danielpm1982Note2="http://www.danielpm1982.com/note2"
+	elementFormDefault="qualified">
+	
+	<!-- 	importing of all Note1 and Note2 xsd elements, types and attributes -->
+	<xs:import namespace="http://www.danielpm1982.com/note1" schemaLocation="Note1.xsd" />
+	<xs:import namespace="http://www.danielpm1982.com/note2" schemaLocation="Note2.xsd" />
+	
+	<!-- 	unique attributes for element types	 -->
+	<xs:attribute name="mailId" type="xs:nonNegativeInteger" default="0" />
+	
+	<!-- 	complex types for elements -->
+	<xs:complexType name="mailType">
+		<xs:sequence>
+			<xs:element name="from" type="danielpm1982Note1:fromType" />
+			<xs:element name="to" type="danielpm1982Note1:toType" />
+			<xs:element name="messageText" type="danielpm1982Note1:messageTextType" />
+			<xs:element name="dateTime" type="danielpm1982Note1:dateTimeType" />
+			<xs:element name="origin" type="danielpm1982Note2:originType" />
+			<xs:element name="destine" type="danielpm1982Note2:destineType" />
+			<xs:element name="content" type="danielpm1982Note2:contentType" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="danielpm1982NoteAll:mailId" use="required" />
+	</xs:complexType>
+	
+	<!-- 	complex root element -->
+	<xs:element name="note" type="danielpm1982NoteAll:mailType" />
+</xs:schema>
+
+<!-- An example with the import of two different namespaces schema (Note1 and Note2), and reuse of its
+components to create a root element to this target namespace itself (NoteAll). XML document instances 
+only need to refer to this NoteAll xsd file, and to its target namespace, not to the other xsd documents 
+or their namespaces embedded to it..-->

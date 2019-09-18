@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:carta
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/multilanguageLetter MultilanguageLetter.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/multilanguageLetter"
+	danielpm1982:id="250">
+	<danielpm1982:de>PessoaA</danielpm1982:de>
+	<danielpm1982:para>PessoaB</danielpm1982:para>
+	<danielpm1982:textoDaMensagem>Esta é uma carta escrita em português!</danielpm1982:textoDaMensagem>
+	<danielpm1982:dataHora>2019-10-01T17:00:00</danielpm1982:dataHora>
+</danielpm1982:carta>

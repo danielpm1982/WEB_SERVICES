@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/MusicCatalogPart1"
+	xmlns:danielpm1982="http://www.danielpm1982.com/MusicCatalogPart1"
+	elementFormDefault="qualified">
+	<xs:simpleType name="stringType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="dateType">
+		<xs:restriction base="xs:date" />
+	</xs:simpleType>
+	<xs:complexType name="music">
+		<xs:sequence>
+			<xs:element name="title" type="danielpm1982:stringType" />
+			<xs:element name="author" type="danielpm1982:stringType" />
+			<xs:element name="dateTimeReleased" type="danielpm1982:dateType" />
+			<xs:any minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:anyAttribute />
+	</xs:complexType>
+	<xs:element name="musicCatalog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="music" type="danielpm1982:music" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:anyAttribute />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

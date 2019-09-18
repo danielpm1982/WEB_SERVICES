@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/multilanguageLetter"
+	xmlns:danielpm1982="http://www.danielpm1982.com/multilanguageLetter"
+	elementFormDefault="qualified">
+	<xs:attribute name="id" type="xs:nonNegativeInteger" default="0" />
+	<!-- 	head (substitutable) global elements -->
+	<xs:element name="from" type="xs:string" />
+	<xs:element name="to" type="xs:string" />
+	<xs:element name="messageText">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50000" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="dateTime" type="xs:dateTime" />
+	<!-- 	substituting global elements -->
+	<xs:element name="de" substitutionGroup="danielpm1982:from" />
+	<xs:element name="para" substitutionGroup="danielpm1982:to" />
+	<xs:element name="textoDaMensagem" substitutionGroup="danielpm1982:messageText" />
+	<xs:element name="dataHora" substitutionGroup="danielpm1982:dateTime" />
+	<!-- 	head (substitutable) root (global) element -->
+	<xs:element name="letter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="danielpm1982:from" />
+				<xs:element ref="danielpm1982:to" />
+				<xs:element ref="danielpm1982:messageText" />
+				<xs:element ref="danielpm1982:dateTime" />
+			</xs:sequence>
+			<xs:attribute ref="danielpm1982:id" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<!-- 	root substituting global element -->
+	<xs:element name="carta" substitutionGroup="danielpm1982:letter" />
+</xs:schema>

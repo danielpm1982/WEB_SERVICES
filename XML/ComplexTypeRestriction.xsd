@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/ComplexTypeRestriction"
+	xmlns:danielpm1982="http://www.danielpm1982.com/ComplexTypeRestriction"
+	elementFormDefault="qualified">
+	<xs:simpleType name="stringType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="stringRestricterType">
+		<xs:restriction base="danielpm1982:stringType">
+			<xs:maxLength value="10" />
+			<xs:whiteSpace value="collapse" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="typeBase">
+	  	<xs:sequence>
+		    <xs:element name="elementA" type="danielpm1982:stringType" />
+	  	</xs:sequence>
+	  	<xs:attribute name="id" type="danielpm1982:stringType" />
+	</xs:complexType>
+	<xs:complexType name="typeRestricted">
+	  	<xs:complexContent>
+	  		<xs:restriction base="danielpm1982:typeBase">
+	  			<xs:sequence>
+		    		<xs:element name="elementA" type="danielpm1982:stringRestricterType" />
+	  			</xs:sequence>
+	  			<xs:attribute name="id" type="danielpm1982:stringRestricterType" use="required" />
+	  		</xs:restriction>
+	  	</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="rootElement" type="danielpm1982:typeRestricted" />
+</xs:schema>

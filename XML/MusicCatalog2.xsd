@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/MusicCatalogPart2"
+	xmlns:danielpm1982="http://www.danielpm1982.com/MusicCatalogPart2"
+	elementFormDefault="qualified">
+	<xs:simpleType name="stringType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="genreType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Rock" />
+			<xs:enumeration value="GregorianChant" />
+			<xs:enumeration value="ClassicMusic" />
+			<xs:enumeration value="Reggae" />
+			<xs:enumeration value="Instrumental" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="longType">
+		<xs:restriction base="xs:long" />
+	</xs:simpleType>
+	<xs:element name="albumName" type="danielpm1982:stringType" />
+	<xs:element name="recordCompanyName" type="danielpm1982:stringType" />
+	<xs:element name="genre" type="danielpm1982:genreType" />
+	<xs:element name="description" type="danielpm1982:stringType" />
+	<xs:attribute name="catalogId" type="danielpm1982:longType" />
+	<xs:attribute name="musicId" type="danielpm1982:longType" />
+</xs:schema>
