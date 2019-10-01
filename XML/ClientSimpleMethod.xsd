@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/client"
+	xmlns:danielpm1982="http://www.danielpm1982.com/client"
+	elementFormDefault="qualified">
+	<xs:element name="clientRecord">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50" />
+							<xs:whiteSpace value="collapse" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="gender" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="male" />
+							<xs:enumeration value="female" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="birthDate" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:date">
+							<xs:pattern value="\d{4}-\d{2}-\d{2}" />
+							<xs:whiteSpace value="collapse" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="email" minOccurs="0" maxOccurs="2">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50" />
+							<xs:whiteSpace value="collapse" />
+							<xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})" />
+						</xs:restriction>	
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="address" minOccurs="1" maxOccurs="2">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="150" />
+							<xs:whiteSpace value="collapse" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="phoneNumber" minOccurs="0" maxOccurs="3">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="20" />
+							<xs:whiteSpace value="collapse" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="clientId" type="xs:nonNegativeInteger" use="required" />
+		</xs:complexType>
+	</xs:element>	
+</xs:schema>
+
+<!-- This is a basic XSD schema just for showing how to declare the root element and all nested elements, types and attributes inside it, when using the simpleMethod design method. -->

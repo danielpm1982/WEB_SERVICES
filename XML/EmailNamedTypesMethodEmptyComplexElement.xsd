@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/EmailNamedTypesMethodEmptyComplexElement"
+	xmlns:danielpm1982="http://www.danielpm1982.com/EmailNamedTypesMethodEmptyComplexElement"
+	elementFormDefault="qualified">
+	<xs:simpleType name="longType">
+		<xs:restriction base="xs:long" />
+	</xs:simpleType>
+	<xs:simpleType name="stringEmptyType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="emailEmpty">
+		<xs:simpleContent>
+			<xs:extension base="danielpm1982:stringEmptyType">
+				<xs:attribute name="emailId" type="danielpm1982:longType" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="emailEmpty2">
+		<xs:attribute name="emailId" type="danielpm1982:longType" use="required" />
+	</xs:complexType>
+<!-- 	<xs:element name="email" type="danielpm1982:emailEmpty" /> -->
+	<xs:element name="email" type="danielpm1982:emailEmpty2" />
+</xs:schema>
