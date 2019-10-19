@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:rootElement 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/ComplexTypeExtension ComplexTypeExtension.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/ComplexTypeExtension"
+	id="50">
+	<danielpm1982:elementA>abcdef</danielpm1982:elementA>
+	<danielpm1982:elementB>abc@def.com</danielpm1982:elementB>
+</danielpm1982:rootElement>

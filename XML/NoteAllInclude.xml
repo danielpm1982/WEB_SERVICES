@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:note
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.danielpm1982.com/noteAllInclude NoteAllInclude.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/noteAllInclude"
+	danielpm1982:mailId="320">
+	<danielpm1982:from>citzen1</danielpm1982:from>
+	<danielpm1982:to>citzen2</danielpm1982:to>
+	<danielpm1982:messageText>Hello from citzen1 to citzen2 !</danielpm1982:messageText>
+	<danielpm1982:dateTime>2019-05-01T15:00:00</danielpm1982:dateTime>
+	<danielpm1982:origin>citzen1@citzen.com</danielpm1982:origin>
+	<danielpm1982:destine>citzen2@citzen.com</danielpm1982:destine>
+	<danielpm1982:content>text content1</danielpm1982:content>
+	<danielpm1982:content>text content2</danielpm1982:content>
+	<danielpm1982:content>text content3</danielpm1982:content>
+</danielpm1982:note>
