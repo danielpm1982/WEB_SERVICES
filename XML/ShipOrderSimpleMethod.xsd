@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/ShipOrderSimpleMethod"
+	xmlns:danielpm1982="http://www.danielpm1982.com/ShipOrderSimpleMethod"
+	elementFormDefault="qualified">
+	<!--Definition of all elements directly, according to the nesting sequence... no other global elements or types to be reused of referred using ref or type attributes -->
+	<xs:element name="shipOrder">
+		<xs:complexType>
+		    <xs:sequence>
+			   	<xs:element name="client" type="xs:string" />
+			   	<xs:element name="shipTo">
+					<xs:complexType>
+				       <xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="address" type="xs:string" />
+							<xs:element name="email" type="xs:string" />
+							<xs:element name="city" type="xs:string" />
+							<xs:element name="state" type="xs:string" />
+							<xs:element name="country" type="xs:string" />
+							<xs:element name="zipCode" type="xs:positiveInteger" />
+				       </xs:sequence>
+			     	</xs:complexType>
+			   	</xs:element>
+				<xs:element name="item" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="xs:string" />
+							<xs:element name="quantity" type="xs:positiveInteger" />
+							<xs:element name="price" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="discountTicket" type="xs:string" />
+				<xs:element name="dateTime" type="xs:dateTime" />
+		    </xs:sequence>
+		    <xs:attribute name="orderId" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
+<!-- This ShipOrder XSD schema basically exemplifies the 3 design methods for XSD files, in this case, the Simple Method. -->

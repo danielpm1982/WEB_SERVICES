@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/noteAllInclude"
+	elementFormDefault="qualified">	
+<!-- 	simple types for elements -->
+	<xs:simpleType name="originType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="destineType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="contentType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+
+<!-- Base XSD document to be included at the NoteAllInclude.xsd -->

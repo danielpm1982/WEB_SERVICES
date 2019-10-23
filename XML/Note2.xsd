@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/note2"
+	xmlns:danielpm1982Note2="http://www.danielpm1982.com/note2"
+	elementFormDefault="qualified">	
+
+<!-- 	simple types for elements -->
+	<xs:simpleType name="originType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="destineType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	<xs:simpleType name="contentType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dateTimeType">
+		<xs:restriction base="xs:dateTime" />
+	</xs:simpleType>
+
+<!-- 	unique attributes for element types	 -->
+	<xs:attribute name="messageId" type="xs:nonNegativeInteger" default="0" />
+
+<!-- 	complex types for elements -->
+	<xs:complexType name="messageType">
+		<xs:sequence>
+			<xs:element name="origin" type="danielpm1982Note2:originType" />
+			<xs:element name="destine" type="danielpm1982Note2:destineType" />
+			<xs:element name="content" type="danielpm1982Note2:contentType" maxOccurs="unbounded"/>
+			<xs:element name="dateTime" type="danielpm1982Note2:dateTimeType" />
+		</xs:sequence>
+		<xs:attribute ref="danielpm1982Note2:messageId" use="required" />
+	</xs:complexType>
+
+<!-- 	complex root element -->
+	<xs:element name="note" type="danielpm1982Note2:messageType" />
+</xs:schema>
+
+
+<!-- This is a basic and independent XSD schema for showing how to declare simple types, complex types, attributes, nested elements and the root element when using the namedTypes design method. -->
+<!-- or: -->
+<!-- For being used as the Base XSD document to be imported at the NoteAllImport.xsd -->

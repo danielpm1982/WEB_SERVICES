@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:note 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.danielpm1982.com/note2 Note2.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/note2"
+	danielpm1982:messageId="350">
+	<danielpm1982:origin>user2</danielpm1982:origin>
+	<danielpm1982:destine>user1</danielpm1982:destine>
+	<danielpm1982:content>Hello user1 from user2 !</danielpm1982:content>
+	<danielpm1982:content>Another Hello to user1 from user2 !</danielpm1982:content>
+	<danielpm1982:content>A third Hello to user1 from user2 !</danielpm1982:content>
+	<danielpm1982:dateTime>2019-05-05T16:30:00</danielpm1982:dateTime>
+</danielpm1982:note>
