@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<danielpm1982:rootElement
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.danielpm1982.com/ComplexTypeRestriction ComplexTypeRestriction.xsd"
-	xmlns:danielpm1982="http://www.danielpm1982.com/ComplexTypeRestriction"
-	id="5000000000">
-	<danielpm1982:elementA>aaaaaaaaaa</danielpm1982:elementA>
-</danielpm1982:rootElement>
