@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:email 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/EmailNamedTypesMethodMixed EmailNamedTypesMethodMixed.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/EmailNamedTypesMethodMixed"
+	emailId="0">
+	---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+	<danielpm1982:from>
+		---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+		<danielpm1982:name>name1</danielpm1982:name>
+		---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+		<danielpm1982:email>name1@name.com</danielpm1982:email>
+	</danielpm1982:from>
+	---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+	<danielpm1982:to>
+		<danielpm1982:name>name2</danielpm1982:name>
+		<danielpm1982:email>name2@name.com</danielpm1982:email>
+	</danielpm1982:to>
+	---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+	<danielpm1982:dateTime>2018-12-31T15:00:00</danielpm1982:dateTime>
+	---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+	<danielpm1982:text>Hello World !</danielpm1982:text>
+	---------------------aaaaaaaaaaaaaaaaaaaaa---------------------
+</danielpm1982:email>

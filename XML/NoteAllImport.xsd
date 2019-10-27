@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/noteAllImport"
+	xmlns:danielpm1982NoteAll="http://www.danielpm1982.com/noteAllImport"
+	xmlns:danielpm1982Note1="http://www.danielpm1982.com/note1"
+	xmlns:danielpm1982Note2="http://www.danielpm1982.com/note2"
+	elementFormDefault="qualified">
+	
+	<!-- 	importing of all Note1 and Note2 xsd elements, types and attributes -->
+	<xs:import namespace="http://www.danielpm1982.com/note1" schemaLocation="Note1.xsd" />
+	<xs:import namespace="http://www.danielpm1982.com/note2" schemaLocation="Note2.xsd" />
+	<!-- 	unique attributes for element types	 -->
+	<xs:attribute name="mailId" type="xs:nonNegativeInteger" default="0" />
+	
+	<!-- 	complex types for elements -->
+	<xs:complexType name="noteType">
+		<xs:sequence>
+			<xs:element name="from" type="danielpm1982Note1:fromType" />
+			<xs:element name="to" type="danielpm1982Note1:toType" />
+			<xs:element name="messageText" type="danielpm1982Note1:messageTextType" />
+			<xs:element name="dateTime" type="danielpm1982Note1:dateTimeType" />
+			<xs:element name="origin" type="danielpm1982Note2:originType" />
+			<xs:element name="destine" type="danielpm1982Note2:destineType" />
+			<xs:element name="content" type="danielpm1982Note2:contentType" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="danielpm1982NoteAll:mailId" use="required" />
+	</xs:complexType>
+	<!-- 	complex root element -->
+	<xs:element name="note" type="danielpm1982NoteAll:noteType" />
+</xs:schema>
+
+<!-- An example with the importing of two independent and different namespaces schema (Note1.xsd and Note2.xsd), 
+with different target namespaces and schemaLocation.
+The instances then can refer to this one and only XSD document target namespace (the "All" importing one) and 
+ignore the other namespaces or XSD documents imported.
+Observe that the two different original target namespaces are kept and can be accessed individually, for example,
+by using the custom prefixes and custom local namespaces associated to these original target namespaces 
+(xmlns:danielpm1982Note1 and xmlns:danielpm1982Note2), both at this XSD importing document or at its instances. 
+And with no conflict between equal named components ('cause their namespaces are different).
+If this XSD document would be to import different XSD files, in order to incorporate all their components to the one
+target namespace of this XSD itself (xmlns:danielpm1982NoteAllImport), and not maintain anymore any reference to the
+other imported namespaces and XSD imported files, <xs:include> should be used instead, and the instances referred to
+this importing XSD would still be able to use all included elements using the single target namespace of this file, 
+but not from the original namespaces, whose components would have been included from, differently, though, from 
+the <xs:import> case.
+See the other XSD and XML files as an example of using xs:include, instead of xs:import.
+That's the 2 ways you can import other XSD files to a certain XSD, in order to reuse their components: xs:import or 
+xs:include.
+-->

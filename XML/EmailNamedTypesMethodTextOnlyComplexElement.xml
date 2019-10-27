@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:email 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/EmailNamedTypesMethodTextOnlyComplexElement EmailNamedTypesMethodTextOnlyComplexElement.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/EmailNamedTypesMethodTextOnlyComplexElement"
+	emailId="100">
+	Hello World !!
+</danielpm1982:email>

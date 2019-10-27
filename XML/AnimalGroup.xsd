@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.danielpm1982.com/AnimalGroup"
+	xmlns:danielpm1982="http://www.danielpm1982.com/AnimalGroup"
+	elementFormDefault="qualified">
+	
+<!-- 	simple types for elements -->
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20" />
+			<xs:whiteSpace value="collapse" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="speciesType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Canis familiaris" />
+			<xs:enumeration value="Felis catus" />
+			<xs:enumeration value="Oryctolagus cuniculus" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="color">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20" />
+			<xs:whiteSpace value="collapse" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="birthDate">
+		<xs:restriction base="xs:date">
+			<xs:pattern value="\d{4}-\d{2}-\d{2}" />
+			<xs:whiteSpace value="collapse" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="owner">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20" />
+			<xs:whiteSpace value="collapse" />
+		</xs:restriction>
+	</xs:simpleType>
+
+<!-- 	unique attributes for element types	 -->
+	<xs:attribute name="animalId" type="xs:nonNegativeInteger" default="0" />
+	<xs:attribute name="groupId" type="xs:nonNegativeInteger" default="0" />
+
+<!-- 	complex types for elements -->
+	<xs:complexType name="animalType" mixed="false">
+		<xs:sequence>
+			<xs:element name="name" type="danielpm1982:nameType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="species" type="danielpm1982:speciesType" minOccurs="1" maxOccurs="1" />
+			<xs:element name="color" type="danielpm1982:color" minOccurs="1" maxOccurs="1" />
+			<xs:element name="birthDate" type="danielpm1982:birthDate" minOccurs="0" maxOccurs="1" />
+			<xs:element name="owner" type="danielpm1982:owner" minOccurs="0" maxOccurs="1" />
+		</xs:sequence>
+		<xs:attribute ref="danielpm1982:animalId" use="required" />
+	</xs:complexType>
+	<xs:complexType name="animalGroupType" mixed="false">
+		<xs:sequence minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="dog" type="danielpm1982:animalType" maxOccurs="unbounded" minOccurs="0" />
+			<xs:element name="cat" type="danielpm1982:animalType" maxOccurs="unbounded" minOccurs="0" />
+			<xs:element name="rabbit" type="danielpm1982:animalType" maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute ref="danielpm1982:groupId" use="required" />
+	</xs:complexType>
+
+<!-- 	complex root element -->
+	<xs:element name="animalGroup" type="danielpm1982:animalGroupType" />
+</xs:schema>
+
+<!-- An example of an XSD to store an animalGroup data, composed of dogs, cats and/or rabbits. Every XML document instance validates its
+structure and data values types against this XSD elements, attributes and simple/complex types. The schema location and target namespace
+for this XSD is referred at each XML instance in order for it to be validated.-->
+
+<!-- 
+Base types are from the XMLSchema namespace, prefixed as xs: xmlns:xs="http://www.w3.org/2001/XMLSchema".
+Extended types or elements are from the target namespace, linked through the custom namespace (identical URI) and prefixed with the custom prefix 
+danielpm1982: xmlns:danielpm1982="http://www.danielpm1982.com/AnimalGroup". 
+To use a type or element from this .xsd, either from an XML document instance or from the .xsd itself, a custom prefix linked to the target
+namespace of this document, should always be used: elementFormDefault="qualified" .  
+There are at least 3 ways of writing XSDs. This one is the one that uses named types (first declares the simpleTypes, then the attributes and 
+complexTypes, and lastly the elements, in this case, the root element). It favors reuse and maintainability of the XSD and its components.
+-->
+
+<!--
+For more see:
+https://www.w3schools.com/xml/
+https://www.w3schools.com/xml/schema_example.asp
+-->

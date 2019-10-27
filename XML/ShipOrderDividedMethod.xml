@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<danielpm1982:shipOrder 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.danielpm1982.com/ShipOrderDividedMethod ShipOrderDividedMethod.xsd"
+	xmlns:danielpm1982="http://www.danielpm1982.com/ShipOrderDividedMethod"
+	danielpm1982:orderId="100">
+	<danielpm1982:client>client1</danielpm1982:client>
+	<danielpm1982:shipTo>
+		<danielpm1982:name>person1</danielpm1982:name>
+		<danielpm1982:address>person1Address</danielpm1982:address>
+		<danielpm1982:email>person1Email</danielpm1982:email>
+		<danielpm1982:city>person1City</danielpm1982:city>
+		<danielpm1982:state>person1State</danielpm1982:state>
+		<danielpm1982:country>person1Country</danielpm1982:country>
+		<danielpm1982:zipCode>60000000</danielpm1982:zipCode>
+	</danielpm1982:shipTo>
+	<danielpm1982:item>
+		<danielpm1982:title>item1</danielpm1982:title>
+		<danielpm1982:quantity>5</danielpm1982:quantity>
+		<danielpm1982:price>100.5</danielpm1982:price>
+	</danielpm1982:item>
+	<danielpm1982:item>
+		<danielpm1982:title>item2</danielpm1982:title>
+		<danielpm1982:quantity>20</danielpm1982:quantity>
+		<danielpm1982:price>65.9</danielpm1982:price>
+	</danielpm1982:item>
+	<danielpm1982:item>
+		<danielpm1982:title>item3</danielpm1982:title>
+		<danielpm1982:quantity>3</danielpm1982:quantity>
+		<danielpm1982:price>3500.5</danielpm1982:price>
+	</danielpm1982:item>
+	<danielpm1982:discountTicket>DISCOUNT_TICKET_20</danielpm1982:discountTicket>
+	<danielpm1982:dateTime>2019-10-19T16:00:00</danielpm1982:dateTime>
+</danielpm1982:shipOrder>
