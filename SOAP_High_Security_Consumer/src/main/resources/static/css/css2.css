@@ -1,0 +1,151 @@
+body{
+	background-color: black;
+	text-align: center;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+div.welcome, div.soapOps, div.error, div.customerOrders, div.orderCreationResult{
+	font-size: 1.5em;
+	font-family: monospace;
+	width: 95%;
+	margin: auto;
+	margin-top: 1em;
+	color: lightgray;
+}
+div.soapOps p{
+	line-height: 1.5;
+	margin-bottom: 2em;
+}
+div.welcome{
+	font-size: 1.8em;
+}
+div#ordersListBody, div#lastProductRequestBody, div#allProductsBody{
+	border: thin brown dashed;
+	width: 80%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-right: 1em;
+	padding-left: 1em;
+	text-decoration: none;
+}
+div#allProductsBody{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+img#img1{
+	width: 80%;
+	margin-bottom: 0.5em;
+}
+footer{
+	margin-top: 5em;
+	font-size: 1.2em;
+	font-family: monospace;
+	color: lightgray;	
+}
+footer a, error a{
+	font-size: 0.8em;
+}
+a:link{
+	color: green;
+}
+a:visited{
+	color: teal;
+}
+a:hover{
+	color: lime;
+}
+a:active{
+	color: red;
+}
+div.error{
+	font-size: 0.8em;
+}
+div.error a{
+	line-height: 3;
+	font-size: 1.8em;
+}
+div#stacktrace{
+	line-height: 1.5;
+	font-size: 0.4em;
+}
+div.customerOrders a, div.orderCreationResult a, div.productRequestList a{
+	line-height: 2.8;
+}
+div#allProductsBody a{
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: lightgray;
+	padding: 0.7em;
+	border-radius: 0.7em;
+	line-height: 4;
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+}
+div#allProductsBody a:link{
+	color: black;
+}
+div#allProductsBody a:visited{
+	color: black;
+}
+div#allProductsBody a:hover{
+	color: red;
+}
+div.table{
+	display: table;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1em;
+    border-collapse: separate;
+    border-spacing: 1em;
+}
+div.tableRow{
+	display: table-row;
+}
+div.tableCellLeft{
+	display: table-cell;
+	text-align: right;
+	width: 20%;
+	color: white;
+	padding-right: 2%;
+}
+div.tableCellRight{
+	display: table-cell;
+	width: 10%;
+	text-align: left;
+	padding-left: 2%;
+}
+form{
+	border: thin brown dashed;
+	width: 90%;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+input[type=submit]{
+	font-size: 17px;
+	font-weight: bold;
+	background-color: lightgray;
+	padding: 0.7em;
+	border-radius: 0.7em;
+}
+input[type=text]{
+	font-size: 15px;
+	font-weight: bold;
+	background-color: lightgray;
+	padding: 0.7em;
+	border-radius: 0.7em;
+	width: 120px;	
+}
+select{
+	font-size: 15px;
+	font-weight: bold;
+	background-color: lightgray;
+	padding: 0.7em;
+	border-radius: 0.7em;
+	width: 143px;	
+}
