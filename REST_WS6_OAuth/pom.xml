@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.danielpm1982</groupId>
+	<artifactId>REST_WS6</artifactId>
+	<version>1.0</version>
+	<name>REST_WS6</name>
+	<description>REST_WS6</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<cxf-jaxrs.version>3.2.6</cxf-jaxrs.version>
+		<oath2.version>2.4.0.RELEASE</oath2.version>
+		<jackson-jaxrs-xc.version>1.9.13</jackson-jaxrs-xc.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<hibernate.validator>6.0.15.Final</hibernate.validator>
+<!-- 		<cxf-swagger.version>3.1.11</cxf-swagger.version> -->
+<!-- 		<swaggerUI.version>2.9.2</swaggerUI.version> -->
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 		   	<groupId>org.springframework.boot</groupId> -->
+<!-- 		   	<artifactId>spring-boot-starter-actuator</artifactId> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+	    </dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-jaxrs</artifactId>
+		    <version>${jackson-jaxrs-xc.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-xc</artifactId>
+		    <version>${jackson-jaxrs-xc.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.cxf</groupId>
+    		<artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+		    <version>${cxf-jaxrs.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security.oauth</groupId>
+		    <artifactId>spring-security-oauth2</artifactId>
+		    <version>${oath2.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>c3p0</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>${c3p0.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId>
+	    </dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>${hibernate.validator}</version>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.apache.cxf</groupId> -->
+<!-- 		    <artifactId>cxf-rt-rs-service-description-swagger</artifactId> -->
+<!-- 		    <version>${cxf-swagger.version}</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>io.springfox</groupId> -->
+<!-- 		    <artifactId>springfox-swagger-ui</artifactId> -->
+<!-- 		    <version>${swaggerUI.version}</version> -->
+<!-- 		</dependency> -->
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
